@@ -1,66 +1,46 @@
-## Foundry
+# OurToken - ERC20 Token Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+OurToken is a simple ERC20 token implementation built using Solidity and OpenZeppelin contracts. This project demonstrates the basic functionality of an ERC20 token, including minting, transferring, and managing allowances.
 
-Foundry consists of:
+## Features
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- ERC20 compliant token
+- Initial supply minted to the deployer
+- Standard transfer and approval functions
+- Comprehensive test suite
 
-## Documentation
+## Project Structure
 
-https://book.getfoundry.sh/
+- `src/OurToken.sol`: Main token contract
+- `script/DeployOurToken.s.sol`: Deployment script
+- `test/OurTokenTest.t.sol`: Test suite for the token contract
 
-## Usage
+## Token Details
 
-### Build
+- Name: OurToken
+- Symbol: OT
+- Decimals: 18
+- Initial Supply: 1000 tokens
 
-```shell
-$ forge build
-```
+## Testing
 
-### Test
+The project includes a comprehensive test suite covering various aspects of the token functionality, including:
 
-```shell
-$ forge test
-```
+- Initial supply and balance checks
+- Transfer functionality
+- Allowance and transferFrom operations
+- Failure cases for insufficient balance and allowance
 
-### Format
+## Deployment
 
-```shell
-$ forge fmt
-```
+The deployment script (`DeployOurToken.s.sol`) allows for easy deployment of the token contract with the specified initial supply.
 
-### Gas Snapshots
+## Technologies Used
 
-```shell
-$ forge snapshot
-```
+- Solidity
+- Foundry (for testing and deployment)
+- OpenZeppelin Contracts
 
-### Anvil
+## License
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This project is licensed under the MIT License.
